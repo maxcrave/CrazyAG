@@ -22,7 +22,7 @@ do
             echo " today dir: $today_audit_dir"
             sudo mkdir -p $today_audit_dir
         fi;
-        echo 123456 | sudo /usr/bin/strace -f -p $ssh_pid -ttt -o "$md5_str.log"
+        echo 123456 | sudo /usr/bin/strace -f -p $ssh_pid -ttt -o "$today_audit_dir/$md5_str.log"
         break
     fi;
 done;

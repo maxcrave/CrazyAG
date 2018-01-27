@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4832b6a-2959-4fb9-ab36-2a5b437a8451" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyAG/settings.py" afterPath="$PROJECT_DIR$/CrazyAG/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_enterpoint.py" afterPath="$PROJECT_DIR$/user_enterpoint.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/session_tracker.sh" afterPath="$PROJECT_DIR$/backend/session_tracker.sh" />
     </list>
     <ignored path="CrazyAG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_enterpoint.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_enterpoint.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_enterpoint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+            <state relative-caret-position="395">
+              <caret line="80" column="84" selection-start-line="80" selection-start-column="76" selection-end-line="80" selection-end-column="84" />
               <folding>
                 <element signature="e#45#54#0" expanded="true" />
               </folding>
@@ -71,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session_tracker.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="session_tracker.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/session_tracker.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="456">
+              <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -136,8 +135,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="223" />
-    <option name="y" value="63" />
+    <option name="x" value="91" />
+    <option name="y" value="54" />
     <option name="width" value="1428" />
     <option name="height" value="922" />
   </component>
@@ -562,7 +561,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="223" y="63" width="1428" height="922" extended-state="0" />
+    <frame x="91" y="54" width="1428" height="922" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14108187" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -916,21 +915,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/session_tracker.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_enterpoint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+        <state relative-caret-position="395">
+          <caret line="80" column="84" selection-start-line="80" selection-start-column="76" selection-end-line="80" selection-end-column="84" />
           <folding>
             <element signature="e#45#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/session_tracker.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
+          <folding />
         </state>
       </provider>
     </entry>
