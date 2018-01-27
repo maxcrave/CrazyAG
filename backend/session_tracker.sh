@@ -14,14 +14,14 @@ do
 
         today=`date "+%Y_%m_%d"`
         today_audit_dir="logs/audit/$today"
-        if [ today_audit_dir ]
-        then
+        if [ -d today_audit_dir ];then
             echo " ----start tracking log---- "
         else
             echo "dir not exist"
             echo " today dir: $today_audit_dir"
             sudo mkdir -p $today_audit_dir
         fi;
+        sleep 0.1
         echo 123456 | sudo /usr/bin/strace -f -p $ssh_pid -ttt -o "$today_audit_dir/$md5_str.log"
         break
     fi;
