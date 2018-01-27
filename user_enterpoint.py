@@ -4,6 +4,8 @@
 import os
 import getpass
 import subprocess
+import hashlib
+import time
 from django.contrib.auth import authenticate
 
 class UserPortal(object):
@@ -68,10 +70,17 @@ class UserPortal(object):
                             user_input = int(user_input2)
                             if user_input >= 0 and user_input < selected_hostgroup.bind_hosts.all().count():
                                 select_host = selected_hostgroup.bind_hosts.all()[user_input]
-                                print('Connecting ...........',select_host)
-                                cmd_inp = 'sshpass -p {password} ssh {user}@{ip_addr} -o "StrictHostKeyChecking no"'.format(password=select_host.host_user.password,
-                                                                                                                            user = select_host.host_user.username,
-                                                                                                                            ip_addr = select_host.host.ip_addr)
+
+                                md5_str = hashlib.md5(str(time.time()).encode('utf-8')).hexdigest()
+
+                                cmd_inp = 'sshpass -p {password} /usr/local/openssh7/bin/ssh {user}@{ip_addr} -Z {md5_str} -o "StrictHostKeyChecking no"'.format(password=select_host.host_user.password,user = select_host.host_user.username,ip_addr = select_host.host.ip_addr,md5_str = md5_str,)
+
+                                session_tracker_script = settings.SESSION_TRACKER_SCRIPT
+                                tracker_obj = subprocess.Popen("%s %s" % (session_tracker_script, md5_str), shell=True,
+                                                               stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                                               cwd=settings.BASE_DIR)
+
+                                print('Connecting ...........', select_host)
                                 subprocess.run(cmd_inp,shell=True)
                                 print('Logout .......... ')
                         if user_input2 == "b":
@@ -82,6 +91,7 @@ if __name__ == '__main__':
     import django
     django.setup()
 
+    from django.conf import settings
     from audit import models
 
     portal = UserPortal()
